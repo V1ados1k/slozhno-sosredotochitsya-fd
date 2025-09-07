@@ -28,6 +28,7 @@
   color: #FF0070;
   justify-self: flex-end;
   position: absolute;
+  margin-top: 10px;
 }
 
 .header__rec::after {
@@ -48,4 +49,17 @@
   font-weight: 700;
   text-shadow: 4px 4px 0 var(--accent-color);
   color: #DB00FF;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-start: 1;
+  grid-column-end: auto;
+  justify-self: end;
+  margin-top: 41px;
+  background-color: transparent;
+}
+
+.header__theme-menu-item {
 }
