@@ -10,3 +10,42 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.page {
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+}
+
+.header__rec {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FF0070;
+  justify-self: flex-end;
+  position: absolute;
+}
+
+.header__rec::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background-color:#ff0070;
+  box-shadow: 0px 0px 4px #ff0070;
+}
+
+.header__title {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: #DB00FF;
+}
