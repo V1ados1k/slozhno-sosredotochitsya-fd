@@ -4,7 +4,140 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
+.decorated-zone {
+  position: relative; 
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;  
+  height: 25px;
+  border: 2px solid var(--main-title-section-color); 
+}
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.decorated-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.header__theme-menu-item .header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--main-title-section-color);
+  outline: none;
+}
+
 .header {
   height: 1080px;
   min-height: 668px;
+}
+
+.header__title_accent {
+  display: inline-block;
+}
+
+.header__theme-menu {
+  grid-column-start: 2;
+  grid-column-end: auto;
+  align-self: center;
+  margin-top: 18px;
+  margin-right: 6px;
+}
+
+.header__theme-menu-item {
+  list-style-type: none;
+}
+
+.title__paragraph {
+  margin: 19px 0px 10px 1px;
+  height: auto;
+}
+
+.paragraph__container {
+  margin: 0px 14px 0px 10px;
+}
+
+.paragraph__container_accent {
+  margin: 10px 0px 20px;
+}
+
+.sky__container p, .music__container p, .walk__container p, .eat__container p, .read__container p {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 355px;
+} 
+
+.card__section {
+  display: grid;
+}
+
+.card__container {
+  display: grid;
+  margin: 10px 10px 40px;
+  gap: 10px;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  width: 355px;
+}
+
+.footer__container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  align-items: center;
+}
+
+.letter__accent {
+  text-shadow: 1px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.letter__accent:hover {
+  border: none;
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.letter__accent:focus {
+  border: none;
+  outline: none;
+}
+
+.letter__accent:focus-visible {
+  border: 1px solid var(--main-text-color);
+}
+
+.footer__container::before,
+.footer__container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 26px;
+  border: 2px solid var(--main-title-section-color);
+}
+
+.footer__container::before {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.footer__container::after {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
 }
