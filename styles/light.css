@@ -8,100 +8,24 @@
   --main-text-color: #353430;
   --main-title-color: #353430;
   --main-title-section-color: #353430;
-  --main-accent-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --background-color: url(../images/cover-image-light.png);
+  --main-accent-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --background-image: url(../images/cover-image-light.png);
   --button-accent: #35343066;
+  --background-color: #fff1f7;
 }
 
 :root.theme-light .header__rec {
   display: none;
 }
 
-.page {
-  background-image: var(--background-color);
-  background-position: center;
-  background-attachment: fixed;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-     --main-text-color: #353430;
-  --main-title-color: #353430;
-  --main-title-section-color: #353430;
-  --main-accent-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --background-color: url(../images/cover-image-light.png);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--main-title-section-color);
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid var(--button-accent);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--main-title-section-color);
-  }
-
-  .decorated-zone::before,
-  .decorated-zone::after {
-    border: 2px solid var(--main-title-section-color);
-  }
-
-  .header__title {
-    color: var(--main-accent-color);
-    text-shadow: 4px 4px 0 var(--accent-color);
-  }
-
-  .header__paragraph {
-    background-color: var(--accent-color);
-  }
-
-  .text__paragraph {
-    color: var(--main-title-color);
-  }
-
-  .text__container {
-    color: var(--main-text-color);
-  }
-
-  .second_title__section {
-    color: var(--main-title-color);
-  }
-
-  .title__paragraph_accent {
-    color: var(--main-title-color);
-  }
-
-  .text__footer {
-    color: var(--main-accent-color);
-    text-shadow: 3px 3px 0 var(--accent-color);
-  }
-
-  .footer__container::before,
-  .footer__container::after {
-    border: 2px solid var(--main-title-section-color);
-  }
-
-  .letter__accent {
-    text-shadow: 1px 2px 0 var(--accent-color);
-    text-decoration: none;
-  }
-
-  .letter__accent:hover {
-    border: none;
-    border-bottom: 1px solid var(--main-text-color);
-  }
-
-  .letter__accent:focus {
-    border: 1px solid var(--main-text-color);
-    outline: none;
-  }
-
-  .letter__accent:focus-visible {
-    border-bottom: 1px solid var(--main-text-color);
+    --main-text-color: #353430;
+    --main-title-color: #353430;
+    --main-title-section-color: #353430;
+    --main-accent-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --background-color: url(../images/cover-image-light.png);
   }
 }

@@ -12,20 +12,7 @@
   --button-accent: #ff007066;
 }
 
-:root.theme-light { 
-  --main-text-color: #353430;
-  --main-title-color: #353430;
-  --main-title-section-color: #353430;
-  --main-accent-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --background-color: url(../images/cover-image-light.png);
-}
-
-:root.theme-auto {
-
-}
-
-@media (min-width: 767px) and (max-width: 1023px) {
+@media (width >= 768px) {
   .header {
     align-items: center;
   }
@@ -48,26 +35,21 @@
 
   .header__theme-menu {
     justify-self: flex-end;
-    margin-top: 102px;
     margin-right: 21px;
-    position: relative;
-    top: 19px;
+    margin-top: 136px;
   }
 
   .header__title {
     max-width: none;
     padding-left: 0px;
-    position: relative;
-    top: 48px;
+    margin-top: 65px;
   }
 
   .header__paragraph {
     justify-self: flex-end;
-    margin: 64px 21px 111px 0px;
+    margin: 47px 21px 128px 0px;
     width: 100%;
     max-width: 364px;
-    height: auto;
-    top: 0px;
   }
 
   .text__section {
@@ -77,67 +59,51 @@
     margin: 60px 20px 0;
   }
 
-  .text__section:nth-of-type(1) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  .heavy__concentration-section {
     margin: 50px 20px 0;
   }
 
-  .text__section:nth-of-type(1) .title__section {
-    grid-column: 1;
-    grid-row: 1;
+  .heavy__concentration-section .title__section {
     margin: 0;
     margin-top: 10px;
     width: 237px;
   }
 
-  .text__section:nth-of-type(1) .multitasking__container {
-    grid-column: 2;
-    grid-row: 1;
+  .heavy__concentration-section .multitasking__container {
     margin: 0;
     margin-left: 13px;
-    width: 472px;
   }
 
-  .text__section:nth-of-type(1) .dopamine__container {
-    grid-column: 2;
-    grid-row: 2;
-    margin-left: 14px;
+  .heavy__concentration-section .dopamine__container {
+    margin-left: 13px;
     margin-right: 0px;
   }
 
-  .text__section:nth-of-type(2) {
+  .decrease__concentration-section {
     display: flex;
     flex-direction: column;
   }
 
-  .text__section:nth-of-type(2) .title__section {
+  .decrease__concentration-section .title__section {
     margin: 0;
     margin-top: 9px;
     margin-bottom: 6px;
     width: 237px;
   }
 
-  .text__section:nth-of-type(2) .second_multitasking__container {
-    grid-column: 2;
-    grid-row: 1;
+  .decrease__concentration-section .second_multitasking__container {
     margin: 0;
   }
 
-  .text__section:nth-of-type(3) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .text__section:nth-of-type(3) .title__section {
+  .advice__section .title__section {
     grid-column: 1;
     grid-row: 1 / span 100;
   }
 
-  .text__section:nth-of-type(3) .title__paragraph_name {
+  .advice__section .title__paragraph_name {
     grid-column: 2;
     grid-row: 1;
-    height: 27px;
+    max-height: 27px;
     margin-top: 10px;
     margin-left: 13px;
     margin-right: 0px;
@@ -147,7 +113,7 @@
     grid-column: 2;
   }
 
-  .second_title__section {
+  .text__section .advice_title__section {
     margin: 0;
     margin-top: 9px;
   }
@@ -171,22 +137,9 @@
     margin-right: 0px;
   }
 
-  .title__paragraph {
-    width: 100%;
-    height: auto;
-    margin: 0 0 10px 0;
-  }
-
   .title__paragraph,
   .text__container {
-    width: 100%;
     margin: 10px 0;
-    margin-left: 1px;
-  }
-
-  .second_multitasking__container {
-    grid-column: 2;
-    grid-row: 1;
   }
 
   .sky__container {
@@ -195,13 +148,14 @@
   }
 
   .sky__container p, .music__container p, .walk__container p, .eat__container p, .read__container p {
-    width: 472px;
+    min-width: 472px;
+    margin-left: 13px;
   }
 
   .title__paragraph_accent {
     margin: 0px;
     margin-top: 19px;
-    margin-left: 13px;
+    margin-left: 14px;
   }
 
   .paragraph__container_accent {
@@ -239,19 +193,14 @@
   }
 
   .title__name {
-    margin: 0px;
     margin-top: 70px;
     margin-left: 20px;
-    width: 728px;
+    max-width: 728px;
   }
 
   .card__container {
-    display: grid;
-    grid-template-columns: 229px 230px 229px;
     grid-template-rows: 192px 230px 318px;
     gap: 20px;
-    width: 728px;
-    height: 800px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
@@ -292,37 +241,10 @@
     height: 100%;
   }
 
-  .footer {
-    position: relative;
-  }
-
-  .footer::before, .footer::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 26px;
-    border: 2px solid #FF0070;
-  }
-
-  .footer::before {
-    top: 22px;
-    right: 19px;
-    border-left: none;
-    border-bottom: none;
-    width: 0px;
-    height: 22px;
-  }
-  
-  .footer::after {
-    bottom: 17px;
-    left: 19px;
-    border-right: none;
-    border-top: none;
-  }
-
   .footer__container {
     justify-self: center;
-    margin-right: 12px;
+    margin-right: 13px;
+    margin-top: 20px;
   }
 
   .footer__container::before {
@@ -334,11 +256,7 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .header {
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(2, auto);
-  }
+@media (width >= 1024px) {
 
   .decorated-zone::before {
   top: 20px;
@@ -362,68 +280,55 @@
 
   .header__theme-menu {
     margin-top: 20px;
-    width: 230px;
     align-self: flex-start;
     justify-self: center;
-    margin-right: 257px;
+    margin-right: 298px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
+    gap: 12px;
   }
 
   .header__title {
-    max-width: 100%;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    top: 106px;
-    padding-left: 0px;
+    margin-top: 211px;
   }
 
   .header__paragraph {
-   position: relative;
-   justify-self: end;
-   width: 491px;
+   max-width: 491px;
    height: 71px;
-   top: 40px;
-   right: 10px;
+   align-self: self-end;
+   margin-bottom: 134px;
   }
 
-  .text__section {
-    display: grid;
+  .heavy__concentration-section .title__section {
+    min-width: 315px;
+    margin-top: 10px;
   }
 
-  .text__section:nth-of-type(1) {
-    grid-template-columns: min-content 1fr;
+  .heavy__concentration-section .multitasking__container {
+    margin-left: 7px;
   }
 
-  .text__section:nth-of-type(1) .title__section {
-    width: 315px;
-    margin-top: 61px;
-    margin-left: 20px;
+  .heavy__concentration-section .dopamine__container {
+    margin-left: 7px;
   }
 
-  .multitasking__container {
-    margin-top: 41px;
-  }
-
-  .dopamine__container {
-    grid-column: 2;
-  }
-
-  .text__section:nth-of-type(2) {
+  .decrease__concentration-section {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content 1fr;
-    margin-left: 20px;
-    margin-right: 20px;
   }
 
-  .text__section:nth-of-type(2) .paragraph__container {
+  .decrease__concentration-section .title__section {
+    min-width: 315px;
+  }
+
+  .decrease__concentration-section .paragraph__container {
     grid-row: 2;
   }
 
-  .second__section {
-    margin-top: 81px;
-    margin-left: 0px;
+  .decrease__concentration-section .text__container {
+    max-width: 315px;
   }
 
   .second_multitasking__container {
@@ -431,39 +336,32 @@
   }
 
   .second_multitasking__container .title__paragraph {
-    margin: 0px;
-    margin-top: 7px;
-  }
-
-  .second_multitasking__container .text__container {
-    margin-top: 10px;
+    margin-top: 13px;
+    max-width: 315px;
   }
 
   .food__container {
     margin: 0px;
   }
 
+   .food__container .title__paragraph {
+    margin-top: 12px;
+    margin-left: 6px;
+    max-width: 315px;
+  }
+
+  .food__container .text__container {
+    margin-left: 7px;
+  }
+
   .gadgets__container {
     margin: 0px;
   }
 
-  .food__container .title__paragraph {
-    margin: 0px;
-    margin-top: 8px;
-    margin-left: 6px;
-    width: 315px;
-  }
-
-  .food__container .text__container {
-    margin-top: 9px;
-    margin-left: 7px;
-  }
-
   .gadgets__container .title__paragraph {
-    margin: 0px;
-    margin-top: 8px;
+    margin-top: 12px;
     margin-left: 13px;
-    width: 315px;
+    max-width: 315px;
   }
 
   .gadgets__container .text__container {
@@ -471,25 +369,13 @@
     margin-left: 14px;
   }
 
-  .text__section:nth-of-type(3) {
-    grid-template-columns: min-content 1fr;
+ .text__section {
+    display: grid;
   }
 
-  .second_title__section {
-    margin-top: 80px;
-    margin-left: 20px;
-    width: 315px;
-  }
-
-  .text__section:nth-of-type(3) .title__paragraph_name {
-    height: 23px;
-    align-self: center;
+  .advice__section .title__paragraph_name {
     margin-top: 10px;
-    width: 649px;
-  }
-
-  .text__section:nth-of-type(3) .paragraph__container_accent {
-    grid-column: 2;
+    max-height: 23px;
   }
 
   .sky__container, .music__container, .walk__container, .eat__container, .read__container {
@@ -498,75 +384,47 @@
   }
 
   .sky__container .title__paragraph_accent {
-    margin: 0px;
-    position: relative;
-    bottom: 46px;
-    width: 649px;
-    left: 11px;
+    margin-top: 53px;
   }
 
   .sky__container .text__container {
-    width: 648px;
-    margin-top: 0px;
-    position: relative;
-    bottom: 36px;
-  }
-
-  .music__container .title__paragraph_accent {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    bottom: 16px;
-    width: 649px;
-  }
-
-  .music__container .text__container {
-    position: relative;
-    bottom: 15px;
-    width: 649px;
+    margin-top: 10px;
   }
 
   .eat__container .title__paragraph_accent {
-    width: 649px;
+    margin-top: 10px;
   }
 
   .read__container .title__paragraph_accent {
-    width: 649px;
+    margin-top: 11px;
   }
 
   .walk__container .title__paragraph_accent, .walk__container .text__container, .eat__container .text__container,
-  .read__container .text__container, .eat__container {
-    width: 649px;
+  .read__container .text__container {
+    max-width: 649px;
+  }
+
+  .sky__container .text__container, .music__container .text__container, .walk__container .text__container, 
+  .eat__container .text__container, .read__container .text__container {
+    min-width: 648px;
   }
 
   .walk__container .title__paragraph_accent {
-    margin-top: 4px;
-    width: 649px;
-  }
-
-  .read__container .title__paragraph_accent {
-    margin-top: 22px;
-  }
-
-  .card__section {
-    display: block;
-  }
-
-  .title__name {
-    margin: 80px 0px 0px;
+    margin-top: 10px;
   }
 
   .card__section {
     margin: 0 20px;
   }
 
+  .title__name {
+    margin: 70px 0px 0px;
+    min-width: 984px;
+  }
+
   .card__container {
-  display: grid;
-  grid-template-columns: 315px 315px 314px;
   grid-template-rows: 259px 313px 434px;
-  gap: 20px;
-  width: 984px;
-  margin-top: 20px;
+  min-width: 984px;
   margin-left: 0px;
   }
 
@@ -605,28 +463,7 @@
   height: 100%;
 }
 
- .footer__container {
-  justify-content: center;
-  align-items: center;
- }
-
  .text__footer {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  margin-top: 44px;
-  margin-right: 11px;
- }
-
- .footer__container::before {
-  top: 41px;
-  right: 19px;
-  border-left: none;
-  border-bottom: none;
- }
-
- .footer__container::after {
-  bottom: 0px;
-  left: 20px;
-  border-right: none;
-  border-top: none;
  }
 }
