@@ -26,6 +26,7 @@
     --main-title-section-color: #353430;
     --main-accent-color: #ffc2e6;
     --accent-color: #ff8dcb;
-    --background-color: url(../images/cover-image-light.png);
+    --background-image: url(../images/cover-image-light.png);
+    --background-color: #fff1f7;
   }
 }
