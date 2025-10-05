@@ -10,6 +10,9 @@
   --accent-color: #ff0070;
   --background-image: url(../images/cover-image-dark.png);
   --button-accent: #ff007066;
+  --font-family: 'IBM Plex Mono', sans-serif;
+  --bold-font-weight: 700;
+  --regular-font-weight: 400; 
 }
 
 @media (prefers-color-scheme: light) {
@@ -55,7 +58,7 @@
   .header__title {
     max-width: none;
     padding-left: 0px;
-    margin-top: 65px;
+    margin-top: 67px;
   }
 
   .header__paragraph {
@@ -189,6 +192,10 @@
     margin-right: 0px;
   }
 
+  .walk__container p {
+    min-height: 250px;
+  }
+
   .read__container {
     margin-right: 0px;
   }
@@ -212,7 +219,8 @@
   .title__name {
     margin-top: 70px;
     margin-left: 20px;
-    max-width: 728px;
+    min-width: 728px;
+    margin-right: 20px;
   }
 
   .card__container {
@@ -308,7 +316,7 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-top: 211px;
+    margin-top: 207px;
   }
 
   .header__paragraph {
@@ -423,7 +431,7 @@
   .walk__container .text__container,
   .eat__container .text__container,
   .read__container .text__container {
-    max-width: 649px;
+    min-width: 649px;
   }
 
   .sky__container .text__container,
@@ -432,10 +440,15 @@
   .eat__container .text__container,
   .read__container .text__container {
     min-width: 648px;
+    margin-right: 1px;
   }
 
   .walk__container .title__paragraph_accent {
     margin-top: 10px;
+  }
+
+  .walk__container p {
+    min-height: 164px;
   }
 
   .card__section {
@@ -445,6 +458,7 @@
   .title__name {
     margin: 70px 0px 0px;
     min-width: 984px;
+    margin-right: 20px;
   }
 
   .card__container {
@@ -490,5 +504,6 @@
 
   .text__footer {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: 10px;
   }
 }
